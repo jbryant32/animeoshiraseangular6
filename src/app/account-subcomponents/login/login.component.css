@@ -1,0 +1,40 @@
+h3{
+    text-align: center;
+    color: #464646;
+    font-weight: 600;
+    margin-top: 15%!important;
+}
+.login-main-container{
+    position: absolute;
+    width: 100%;
+    max-width: 500px;
+    
+}
+.account-main-container{
+    padding: 15px;
+}
+
+.user-info-container{
+
+}
+.user-info-container  input{
+    margin-top: 20px!important;
+    
+}
+.user-info-container  label{
+    margin-bottom: 10px!important;
+}
+.user-info-container input[type='email'], input[type='password']
+{
+    height: 45px;
+
+}
+.user-info-container input[type='submit']{
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 5px!important;
+}

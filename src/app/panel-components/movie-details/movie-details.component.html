@@ -1,0 +1,41 @@
+<div id="movie-details" class="movie-details-main-container">
+  <div id="details-main">
+    <div id="details-header" class="details-header-container">
+      <h3>{{theaterTitle}}</h3>
+      <iframe id="youtube-trailer" iframe width="320" height="188" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+    <div id="details-sub" class="details-sub-container">
+
+      <div id="movie-details-summary" class="movie-details-summary-container">
+        <button id="open-theater-url-button" (click)="openTheaterUrl($event)">
+          <i class="fas fa-film"></i>Theater</button>
+        <div class="h3-parent-div">
+          <h3>ShowTimes</h3>
+        </div>
+        <hr>
+        <div id="showtimes-container" class="showtimes-container">
+          <div *ngFor="let showing of showTimes">
+            {{showing}}
+          </div>
+        </div>
+        <div class="h3-parent-div">
+           <h3>Summary</h3>
+          </div>
+          <hr>
+        <div class="h3-parent-div">
+          <p>{{movieSummary}}</p>
+        </div>
+        <div class="h3-parent-div">
+          <h3>Details</h3>
+        </div>
+        <hr>
+        <div id='sub-closing-details' class="sub-closing-details-container">
+          <div><h4>English Dubbed:</h4>&nbsp;{{englishDubbed}} </div>
+          <div><h4>Japanese Dubbed:</h4>&nbsp;{{japaneseDubbed}} </div>
+          <div><h4>Rating:</h4>&nbsp;{{rating}} </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

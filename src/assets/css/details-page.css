@@ -1,0 +1,29 @@
+﻿#youtube {
+    text-align: center;
+}
+.container{
+    padding-left: 0;
+    padding-right: 0;
+}
+.description {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-height: 30%;
+    width: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+    .description p {
+        font-size: 18px;
+
+        
+    }
+.theater-btn {
+   
+    text-align: center;
+    bottom: -1px;
+    height: 10%;
+    width: 100%;
+    font-size: 18px;}
+.theater-info-btn {
+}

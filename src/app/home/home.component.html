@@ -1,0 +1,96 @@
+<div  id="main-container" class="main-container">
+  <div class="phone-navigation-top-container">
+    <div class="logo"></div>
+    <div class="phone-navigation-top-text-header">
+      <!-- <span>AnimeOsihrase</span> -->
+      <img src="../../assets/images/logoupdate2.png">
+    </div>
+  </div>
+  <div id="droid-navigation-main" class="droid-navigation-main-container">
+    <span>Account</span><span>Anime</span><span>Home</span>
+  </div>
+  <!-- Select category start -->
+  <div class="display-selection-main-container">
+    <span id="select-in-coming-soon">
+      <a onclick="slideComingSoon()" (click)="populateComingSoon($event)">Coming Soon</a>
+    </span>
+    <span id="select-in-theater">
+      <a onclick="slideNowInTheaters()" (click)="populateNowInTheaters($event)">Showing This Month</a>
+    </span>
+    <span id="select-AtoZ">
+      <a onclick="slideInHome()">A To Z</a>
+    </span>
+  </div>
+  <div id="selection-highlighter" class="display-selection-highlighter"></div>
+<!-- select area end -->
+  <div class="movie-tile-main-container"(swipeleft)="swipeLeft($event)" (swiperight)="swipeRight($event)" >
+
+    <div id="AtoZ" class="category-slide-main-container">
+
+      <div class="movies-displayed-container">
+        <div class="banner-container">
+          <div class="banner-row">
+            <img src="assets/images/movie poster/DBS BROLY.jpg" class="" />
+          </div>
+          <div class="sub-container-header">
+            <h4>Dragon Ball Super: Broly</h4>
+            <p>This is the story of a new Saiyan. Earth is peaceful following the Tournament of Power.
+               Realizing that the universes still hold many more strong people yet to see, Goku spends all his days training to reach even greater heights.
+               Then one day, Goku and Vegeta are faced by a Saiyan called 'Broly' who they've never seen before.
+               The Saiyans were supposed to have been almost completely wiped out in the destruction of Planet Vegeta,
+               so what's this one doing on Earth? This encounter between the three Saiyans who have followed completely different destinies turns into a stupendous battle,
+               with even Freeza (back from Hell) getting caught up in the mix.</p>
+          </div>
+        </div>
+        <div *ngFor="let movie of Movies" (click)="openDetails($event)">
+          <div class="movie-row-tile-container" data-id={{movie.id}}>
+            <div data-id={{movie.id}}>
+              <img src={{movie.poster_sm}} class="img-responsive" />
+            </div>
+
+            <div data-id={{movie.id}}>
+              <h4>{{movie['title']}}</h4>
+            </div>
+            <div data-id={{movie.id}}>
+              <span>Rating:Na</span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <app-now-in-theaters></app-now-in-theaters>
+      <app-coming-soon></app-coming-soon>
+      <!-- Bottom navigation start  -->
+
+    </div>
+
+  </div>
+
+</div>
+<!-- <div class="phone-navigation-bottm-container">
+  <div class="phone-navigation-row">
+
+    <div id='account'>
+      <i class="fas fa-user-circle"></i>
+      <br>
+      <span>Account</span>
+    </div>
+
+    <div id="anime">
+      <i class="fas fa-film"></i>
+      <br>
+      <span>Anime</span>
+    </div>
+
+    <div id="home">
+      <i class="fas fa-home"> </i>
+      <br>
+      <span>Home</span>
+    </div>
+  </div>
+
+</div> -->
+
+<!-- movie title main container end -->
+
+<!-- end main container -->

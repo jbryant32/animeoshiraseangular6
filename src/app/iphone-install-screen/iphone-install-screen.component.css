@@ -1,0 +1,50 @@
+
+
+ .main-container{
+    width: 100%;
+    height: 100%;
+
+}
+.install-container{
+    width: 300px;
+    height: auto;
+    left: 50%;
+    margin-left: -150px;
+    position: absolute;
+    bottom: 22px;
+}
+.install-message{
+    background-color: lightgray;
+    text-align: center;
+    padding: 10px 5px 10px 5px
+}
+.install-message span {
+    font-weight: bold;
+}
+.install-message::after{
+    position: absolute;
+    content: "";
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid lightgray;
+    bottom: -19px;
+    left: 50%;
+    margin-left: -20px;
+}
+.arrow-down{
+
+}
+.banner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+}
+img{
+  top: 50%;
+  margin-top: -44px;
+  width: 100%;
+  position: absolute;
+  padding: 0 10px 0 10px;
+}

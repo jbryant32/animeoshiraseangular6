@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en" style="height: 100%;">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="msapplication-starturl" content="/">
+  <meta name="theme-color" content="#f48c5b">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+
+
+  <link rel="mask-icon" href="assets/images/icons/safari-pinned-tab.svg" color="#5bbad5">
+  <link href="assets/images/covers/apple_splash_2048.png" sizes="2048x2732" rel="apple-touch-startup-image" />
+  <link href="assets/images/covers/apple_splash_1668.png" sizes="1668x2224" rel="apple-touch-startup-image" />
+  <link href="assets/images/covers/apple_splash_1536.png" sizes="1536x2048" rel="apple-touch-startup-image">
+  <link href="assets/images/covers/apple_splash_1125.png" sizes="1125x2436" rel="apple-touch-startup-image">
+  <link href="assets/images/covers/apple_splash_1242.png" sizes="1242x2208" rel="apple-touch-startup-image">
+  <link href="assets/images/covers/apple_splash_750.png" sizes="750x1334" rel="apple-touch-startup-image">
+  <link href="assets/images/covers/apple_splash_640.png" sizes="640x1136" rel="apple-touch-startup-image">
+  <link href="assets/images/icons/apple-icon-152x152.png" sizes="152x152" rel="apple-touch-icon">
+  <link rel="icon" sizes="192x192" href="./assets/images/icons/android-icon-192x192.png">
+  <link rel="shortcut icon" href="/assets/images/icons/favicon-16x16.png" />
+  <link rel="stylesheet" href="/assets/css/panel.css" />
+  <link rel="stylesheet" href="/src/assets/js/jquery-3.3.1.min.js" />
+
+
+  <title>Anime Oshirase</title>
+  <link rel="manifest" href="/manifest.json">
+
+  <base href="/">
+  <script>
+    //   console.log( location.pathname);
+    // if (/iPhone/i.test(navigator.userAgent)) {
+    //   if (window.matchMedia('(display-mode: standalone)').matches) {
+    //     {
+    //       if (location.pathname === "/iphoneinstall") {
+    //         location.pathname = "/main";
+    //       }
+
+    //       console.log("Thank you for installing our app!");
+
+    //     }
+    //   }
+    //   else {
+    //     console.log(location.pathname);
+    //     if (location.pathname !== "/iphoneinstall") {
+    //       location.pathname = "/iphoneinstall";
+    //       console.log("not installed")
+    //     }
+    //   }
+    // }
+    // if (/Android/i.test(navigator.userAgent)) {
+    //   if (window.matchMedia('(display-mode: standalone)').matches) {
+    //     {
+    //       console.log("Thank you for installing our app!");
+    //       if (location.pathname === "/androidinstall") {
+    //         location.href = "/main";
+    //       }
+    //     }
+    //   }
+    //   else {
+    //     console.log(location.pathname);
+    //     if (location.pathname !== "/androidinstall") {
+    //       location.href = "/androidinstall";
+    //       console.log("not installed")
+    //     }
+    //   }
+    // }
+  </script>
+  <script>
+    if (/Android/i.test(navigator.userAgent)) {
+      console.log("android")
+      link = document.createElement("link");
+      link.setAttribute("href", "/assets/css/android.css")
+      link.setAttribute("rel", "stylesheet")
+      document.getElementsByTagName("head")[0].appendChild(link);
+    }
+    if (/iPhone/i.test(navigator.userAgent)) {
+      link = document.createElement("link");
+      link.setAttribute("href", "/assets/css/iphone.css")
+      link.setAttribute("rel", "stylesheet")
+      document.getElementsByTagName("head")[0].appendChild(link);
+    }
+  </script>
+  <script>
+    console.log()
+
+    //portait
+    if (window.innerHeight > window.innerWidth) {
+      if (window.screen.width > 500) {
+        alert("Your Device is not supported")
+        window.location.host = "https://google.com"
+      }
+    }
+    if (window.innerHeight < window.innerWidth) {
+      if (window.screen.width > 812) {
+        alert("Your Device is not supported")
+        window.location.host = "https://google.com"
+      }
+    }
+  </script>
+
+
+  <style>
+    html,
+    body {
+
+      overflow: hidden;
+    }
+
+    body {
+      position: fixed;
+    }
+  </style>
+  <script>
+    // 1. Import the functions
+    const bodyScrollLock = require('body-scroll-lock');
+    const disableBodyScroll = bodyScrollLock.disableBodyScroll;
+    const enableBodyScroll = bodyScrollLock.enableBodyScroll;
+
+    // 2. Get a target element that you want to persist scrolling for (such as a modal/lightbox/flyout/nav).
+    const targetElement = document.querySelector("body");
+
+
+    // 3. ...in some event handler after showing the target element...disable body scroll
+    disableBodyScroll(targetElement);
+  </script>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1976d2">
+</head>
+
+<body style="height: 100%;" ontouchstart="">
+  <app-root></app-root>
+</body>
+<script src="assets/js/home.js"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</html>

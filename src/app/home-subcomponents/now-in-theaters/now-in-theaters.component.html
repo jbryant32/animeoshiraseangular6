@@ -1,0 +1,28 @@
+ <!-- Second Panel In Theaters -->
+ <div id="in-theaters" class="category-slide-main-container">
+  <h2>In Theaters {{currentMonth}} </h2>
+  <div id="In-Theater-main" class="in-theater-main-container">
+    <div id="movies-display-in-theaters" class="movies-display-in-theaters-conatiner">
+
+      <div *ngFor="let movie of inTheaters" (click)="openDetails($event)" class="movie-row-large-tile-container" data-id={{movie.id}}>
+        <div data-id={{movie.id}}>
+          <img src={{movie.poster_lg}} class="img-responsive" />
+        </div>
+        <div>
+          <div data-id={{movie.id}}>
+            <h3>{{movie['title']}}</h3>
+          </div>
+          <div class="tile-detail-container" >
+            <span>Subtitles:&nbsp;{{movie['subbed']}}</span>
+            <span>English Dubbed:&nbsp;{{movie['dubbed']}}</span>
+            <span>Rating:Na</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Second Panel In Theaters End -->

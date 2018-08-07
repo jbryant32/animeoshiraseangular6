@@ -1,0 +1,59 @@
+#coming-soon{
+    top: 0%;
+    left: -200%;
+    transition: left 0.5s;
+    padding-bottom: 40px;
+ }
+ iframe{
+    margin-top: 30%;
+ }
+ .youtube-trailer-container div:nth-of-type(1){
+    background-color: white;
+    min-height: 50%;
+    overflow-y: scroll;
+ }
+ .youtube-trailer-container div:nth-of-type(1) p{
+     
+}
+ .coming-soon-tile{
+    position: relative!important;
+ }
+ .coming-soon-open-bar{
+    content: "Trailer";
+    position: absolute;
+    top: 0%;
+    height: 45px;
+    width: 100%;
+    background-color: #adcce6;
+    border-top: #9bb5cb solid 1px;
+    border-bottom: #9bb5cb solid 1px;
+    padding: 0!important;
+    color: white;
+    font-size: 2.1em;
+
+ }
+ .coming-soon-open-bar svg{
+  
+    rotate: 90;
+  
+    
+}
+.youtube-trailer-container{
+    height: 100%;
+    width: 100%;
+  
+    background-color:whitesmoke;
+    text-align: center;
+}
+ .coming-soon-movie-trailer-main-container{
+    position: absolute;
+    text-align: center;
+    bottom: 0%;
+    width: 100%;
+    height: 45px;
+    overflow-y: hidden;
+ }
+ h3{
+    text-align: center !important;
+
+ }

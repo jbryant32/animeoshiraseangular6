@@ -1,0 +1,37 @@
+<!-- Second Panel In Theaters -->
+<div id="coming-soon" class="category-slide-main-container">
+  <h2>Coming Soon</h2>
+  <div id="coming-soon-main-container" class="in-theater-main-container">
+    <div id="movies-display-in-theaters" class="movies-display-in-theaters-conatiner">
+
+      <div *ngFor="let movie of comingSoon" class="coming-soon-tile movie-row-large-tile-container" data-id={{movie.id}}>
+        <div data-id={{movie.id}}>
+          <img src={{movie.poster_lg}} class="img-responsive" />
+        </div>
+        <div>
+          <div data-id={{movie.id}}>
+            <h3>{{movie['title']}}</h3>
+          </div>
+
+
+          <div data-id={{movie.id}}>
+            <span> </span>
+          </div>
+        </div>
+
+        <div  class="coming-soon-movie-trailer-main-container"> 
+          <div class="coming-soon-open-bar"  (click)="openTrailer($event)" data-id="{{movie['trailer']}}">Movie Info</div>
+          <div class="youtube-trailer-container">
+              <iframe id="coming-soon-youtube-trailer"   iframe width="320" height="188" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <div>
+                <p>
+                  {{movie['overview']}}
+                </p>
+              </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

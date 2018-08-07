@@ -1,0 +1,40 @@
+<div id='home' style="display:inherit;">
+  <app-home></app-home>
+</div>
+<div id='account' style="display:none;">
+  <app-account ></app-account>
+</div>
+
+<!-- <div>
+
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-1922276269568764",
+      enable_page_level_ads: true
+    });
+  </script>
+ </div> -->
+
+<!--   nav area -->
+<div class="phone-navigation-bottm-container">
+  <div class="phone-navigation-row">
+
+    <div id='account' (click)='clickedAccount($event)'>
+      <i class="fa fa-user-circle fa-2x"></i>
+      <br>
+      <span>Account</span>
+    </div>
+
+    <div id="anime">
+      <i class="fa fa-film fa-2x"></i>
+      <br>
+      <span>New</span>
+    </div>
+
+    <div id="home" (click)='clickedHome($event)'>
+      <i class="fa fa-home fa-2x"> </i>
+      <br>
+      <span>Home</span>
+    </div>
+  </div>
+</div>

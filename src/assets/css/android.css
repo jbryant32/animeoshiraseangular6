@@ -1,0 +1,335 @@
+
+ html,body{
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a{
+    color: inherit!important;
+   text-decoration: none!important;
+   text-decoration-line: none!important;
+   text-decoration-color: inherit!important;
+}
+.main-container{
+
+   max-height: 1024px;
+   max-width: 812px;
+   height: 100%;
+   width:100%;
+   overflow-y: hidden;
+   background-color: #f9f9f9;
+
+}
+
+.movie-tile-main-container{
+   width: 100%;
+   height: 100%;
+   overflow-y: scroll;
+
+
+}
+.movie-row-tile-container{
+   width: 47%;
+   float: left;
+   margin-top: 10px!important;
+   margin-left: 1.5%!important;
+   margin-right: 1.5%!important;
+   border: lightgray solid thin;
+}
+.movie-row-tile-container div:nth-of-type(1){
+   height: 248.6px;
+   max-height: 249px;
+   min-height: 248.6px;
+   background-color: white;
+   overflow-y: hidden;
+   text-align: center!important;
+}
+.movie-row-tile-container div:nth-of-type(1) img{
+   display: inline!important;
+}
+.movie-row-tile-container div:nth-of-type(2) {
+   padding-left: 5px;
+   padding-right: 5px;
+   padding-top: 20px;
+   /* padding-bottom: 25px; */
+   background-color: white;
+   min-height: 50px;
+   max-height: 50px;
+}
+.movie-row-tile-container div:nth-of-type(3) {
+   padding-left: 5px;
+   padding-right: 5px;
+   padding-top: 2px;
+   padding-bottom: 2px;
+   background-color: white;
+   min-height: 25px;
+   max-height: 25px;
+   color: gray;
+}
+.in-theater-main-container{
+   width: 100%;
+   height: 100%;
+   background-color: #eee;
+   overflow-y: scroll;
+   padding-bottom: 160px;
+}
+.movie-row-large-tile-container{
+   width: 100%;
+   height: 100%;
+   margin-bottom: 20px!important;
+   border-bottom: lightgrey solid;
+}
+.movie-row-large-tile-container img{
+   width:100%;
+
+}
+.movie-row-large-tile-container h3{
+   margin-top: 0;
+   text-align: left;
+   width: 100%;
+}
+.movie-row-large-tile-container span{
+   font-size: 1.1em;
+   margin-top: 5px;
+   /* margin-bottom: 40px; */
+   /* border-bottom: lightgrey solid thin; */
+   display: inline-block;
+   width: 100%;
+
+}
+.movie-row-large-tile-container div:nth-of-type(1){
+
+}
+/* container for sub heading */
+.movie-row-large-tile-container div div{
+   padding: 10px 0 10px 5px;
+  background-color: white;
+   width: 100%;
+}
+.movie-row-large-tile-container div:nth-of-type(2) div{
+
+
+}
+.movie-row-large-tile-container div:nth-of-type(3){
+
+}
+.movie-row-large-tile-container div:nth-of-type(4){
+
+}
+.movie-row-large-tile-container div:nth-of-type(5){
+
+}
+.movie-row-tile-container h4{
+   white-space: nowrap;
+   overflow-x: hidden;
+   text-overflow: ellipsis;
+   margin: 0;
+   font-size: 1.2em;
+
+
+}
+.movies-displayed-container{
+   overflow-y: scroll;
+   width: 100%;
+   height: 100%;
+   padding-bottom: 170px;
+}
+.movie-tile-heading{
+
+}
+.movie-tile-subheading{
+
+}
+.phone-navigation-top-container{
+
+   position: relative;
+   width: 100%;
+   height: 50px;
+   top: 0%;
+   background-color: #eee;
+
+}
+.phone-navigation-top-text-header{
+   text-align: center;
+   font-weight: 600;
+   font-size: 1.5em;
+   letter-spacing: .5px;
+   padding-top: 5px;
+   color: #464646;
+}
+.display-selection-main-container{
+   background-color: #eee;
+}
+.display-selection-main-container span{
+   width: 32%;
+   display: inline-block;
+   text-align: center;
+   padding: 0 0 5px 0;
+}
+.display-selection-main-container span:hover{
+   color: black;
+   font-weight: bold;
+}
+.display-selection-highlighter{
+   background-color: #adcce6;
+   position: absolute;
+   left: 70%;
+   width: 32%;
+   height: 4px;
+   z-index: 1;
+   transition: left 0.5s;
+
+}
+.phone-navigation-bottm-container{
+
+   position: fixed;
+   width: 100%;
+   height: auto;
+   bottom: 0%;
+   background-color: #eee;
+   border-top: gray solid thin;
+
+}
+.phone-navigation-row{
+   text-align: center;
+   height: auto;
+   position: relative;
+   width: 100%;
+
+
+}
+.phone-navigation-row div{
+   position: relative;
+   width: 12%;
+   min-width: 12%;
+   height: auto;
+   padding-top: 4px;
+
+   margin-left: 10%;
+   margin-right: 10%;
+   display: inline-block;
+   color: gray;
+   text-align: center;
+   z-index: 1;
+
+
+
+}
+.phone-navigation-row svg{
+   font-size: 6vw;
+}
+.phone-navigation-row div span:nth-of-type(1){
+   font-size: 3vw;
+
+}
+.phone-navigation-row div:active{
+    color: white;
+
+}
+.phone-navigation-row div:active::after{
+   content: "";
+   position: absolute;
+   width: 120%;
+   height: 100%;
+   left: -10%;
+   top: 0%;
+   z-index: -1;
+   background-color: #adcce6;
+
+}
+.phone-navigation-bottm-container svg{
+   font-size: 2.0em;
+}
+
+
+.banner-container{
+   width: 100%;
+   height: auto;
+   /* min-height: 300px; */
+   /* overflow-y: hidden; */
+   text-align: center;
+   margin-bottom: 20px;
+   position: relative;
+
+   border-bottom: solid thin;
+   border-bottom-color: lightgray;
+
+}
+.banner-container img{
+   width: inherit;
+}
+.banner-row{
+   width: 100%;
+   height: auto;
+}
+.sub-container-header{
+   padding-top: 10px;
+   width: 100%;
+   height: 100px;
+   background-color: white;
+
+}
+.sub-container-header h4{
+   margin-top: 0;
+}
+.sub-container-header p{
+   margin: 0 0 10px;
+   overflow-y: hidden;
+   overflow-x: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   word-break: inherit;
+   /* height: 500px; */
+   width: 100%;
+   display: block;
+}
+
+.category-slide-main-container{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: whitesmoke;
+
+}
+.theater-view-main-container{
+   position: absolute;
+   z-index: 3;
+   background-color: red;
+   top: 0;
+}
+#in-theaters{
+   top: 0%;
+   left: -100%;
+   transition: left 0.5s;
+}
+#in-theaters h1,h2,h3{
+text-align: center
+}
+#coming-soon{
+   left: 0;
+   transition: left 0.5s;
+}
+#coming-soon div{
+   margin: auto;
+}
+ /* Device specific */
+ .phone-navigation-bottm-container{
+     display: none
+ }
+ .droid-navigation-main-container{
+    background-color: #eee;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0;
+    text-align: center;
+ }
+ .droid-navigation-main-container span{
+    display: inline-block;
+    width: 33%;
+    background-color: #eee;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #666666;
+ }
