@@ -46,8 +46,7 @@ export class NowInTheatersComponent implements OnInit {
       var currentYear = currentDate.getFullYear();
 
       var movieMonth = parseInt(movie["showings"][0].split("/")[0]);
-      console.log("month " + movieMonth);
-      console.log("current month " + currentMonth + 1);
+
       if (movieMonth === currentMonth + 1) this.inTheaters.push(movie);
     });
     if (this.inTheaters.length === 0) {

@@ -30,6 +30,11 @@ import {
   HammerGestureConfig,
   HAMMER_GESTURE_CONFIG
 } from "@angular/platform-browser";
+import { InstallscreenComponent } from "./installscreen/installscreen.component";
+import { ActivateGuard } from "./activate.guard";
+import { ActivateCheckService } from "./activate-check.service";
+import { UnsupportedComponent } from './unsupported/unsupported.component';
+import { WorkingComponent } from './working/working.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -55,7 +60,10 @@ export class MyHammerConfig extends HammerGestureConfig {
     MainComponent,
     LoginComponent,
     CreateAccountComponent,
-    HammertimeDirective
+    HammertimeDirective,
+    InstallscreenComponent,
+    UnsupportedComponent,
+    WorkingComponent
   ],
   imports: [
     CommonModule,
@@ -72,24 +80,17 @@ export class MyHammerConfig extends HammerGestureConfig {
 
     RouterModule.forRoot([
       {
+        path:"",
+        component:MainComponent
+      },
+      {
         path: "main",
-        component: MainComponent
-      },
-      // {
-      //   path: 'home',
-      //   component: HomeComponent
-      // },
-      // {
-      //   path:'account',
-      //   component:AccountComponent
-      // },
-      {
-        path: "iphoneinstall",
-        component: IphoneInstallScreenComponent
+        component: MainComponent,
+        canActivate: [ActivateGuard]
       },
       {
-        path: "androidinstall",
-        component: AndroidInstallScreenComponent
+        path: "install",
+        component: InstallscreenComponent
       }
     ]),
 
@@ -99,6 +100,7 @@ export class MyHammerConfig extends HammerGestureConfig {
   ],
   providers: [
     PanelEventHandlerService,
+    ActivateCheckService,
     {
       provide: HAMMER_GESTURE_CONFIG,
       useClass: MyHammerConfig
@@ -117,4 +119,3 @@ export class MyHammerConfig extends HammerGestureConfig {
 export class AppModule {}
 //TODO Major Refactoring needed in Home.ts output an event emitter for sliding left and right
 //TODO create seperate component for Home top Nav buttonss
-//TODO create a install screen component for gods sake with enviroment variable for production and debug

@@ -8,7 +8,7 @@ $(document).ready(() => {
     inTheaters = document.getElementById("in-theater");
     comingSoon = document.getElementById("coming-soon");
 })
-console.log(navigator.userAgent)
+
 
 
 // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {

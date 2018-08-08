@@ -10,10 +10,10 @@
  .youtube-trailer-container div:nth-of-type(1){
     background-color: white;
     min-height: 50%;
-    overflow-y: scroll;
+
  }
  .youtube-trailer-container div:nth-of-type(1) p{
-     
+
 }
  .coming-soon-tile{
     position: relative!important;
@@ -33,15 +33,15 @@
 
  }
  .coming-soon-open-bar svg{
-  
+
     rotate: 90;
-  
-    
+
+
 }
 .youtube-trailer-container{
     height: 100%;
     width: 100%;
-  
+
     background-color:whitesmoke;
     text-align: center;
 }

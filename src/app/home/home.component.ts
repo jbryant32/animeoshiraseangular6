@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   public Movies: Object[];
   public Intheaters: Object[];
   public selectedMovie: Object;
-
+  loading: boolean;
   @ViewChild(NowInTheatersComponent) nowInTheaters: NowInTheatersComponent;
   @ViewChild(ComingSoonComponent) comingSoon: ComingSoonComponent;
   constructor(
@@ -29,12 +29,15 @@ export class HomeComponent implements OnInit {
     private swUpdate: SwUpdate
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.loading=true;
+  }
 
   ngAfterViewInit() {
     this.httpService.Init();
     this.httpService.fetchMoviesCallBack = () => {
       this.Movies = this.sharedData.getMovies();
+    setTimeout(()=>{  this.loading = false},3000);
     };
   }
   public populateNowInTheaters(e) {
@@ -62,11 +65,12 @@ export class HomeComponent implements OnInit {
   swipeLeft(e) {
     var firstCategory = document.getElementById("AtoZ");
     var highlighterForSelect = document.getElementById("selection-highlighter");
-    if (
-      firstCategory.style.left === "200%" ||
-      firstCategory.style.left === ""
-    ) {
-      console.log(firstCategory.style.left);
+    console.log("left");
+    console.log(firstCategory.style.left);
+    if (firstCategory.style.left === "") {
+      firstCategory.style.left = "0%";
+    }
+    if (firstCategory.style.left === "200%") {
       //slide to showing this month
       this.nowInTheaters.Init();
       highlighterForSelect.style.left = "35%";
@@ -78,15 +82,16 @@ export class HomeComponent implements OnInit {
       //slide to coming soon
       firstCategory.style.left = "0%";
       highlighterForSelect.style.left = "70%";
-      this.comingSoon.init()
+      this.comingSoon.init();
       return;
     }
   }
   swipeRight(e) {
     console.log("swpie right");
+
     var firstCategory = document.getElementById("AtoZ");
     var highlighterForSelect = document.getElementById("selection-highlighter");
-    console.log("swipe left");
+    console.log(firstCategory.style.left);
     if (firstCategory.style.left === "0%" || firstCategory.style.left === "") {
       console.log("showing this month");
       this.nowInTheaters.Init();
@@ -96,9 +101,8 @@ export class HomeComponent implements OnInit {
       return;
     }
     if (firstCategory.style.left === "100%") {
-
       //slide to coming soon
-      this.comingSoon.init()
+      this.comingSoon.init();
       firstCategory.style.left = "200%";
       highlighterForSelect.style.left = "0%";
       return;

@@ -33,46 +33,16 @@
   <link rel="manifest" href="/manifest.json">
 
   <base href="/">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
-    //   console.log( location.pathname);
-    // if (/iPhone/i.test(navigator.userAgent)) {
-    //   if (window.matchMedia('(display-mode: standalone)').matches) {
-    //     {
-    //       if (location.pathname === "/iphoneinstall") {
-    //         location.pathname = "/main";
-    //       }
-
-    //       console.log("Thank you for installing our app!");
-
-    //     }
-    //   }
-    //   else {
-    //     console.log(location.pathname);
-    //     if (location.pathname !== "/iphoneinstall") {
-    //       location.pathname = "/iphoneinstall";
-    //       console.log("not installed")
-    //     }
-    //   }
-    // }
-    // if (/Android/i.test(navigator.userAgent)) {
-    //   if (window.matchMedia('(display-mode: standalone)').matches) {
-    //     {
-    //       console.log("Thank you for installing our app!");
-    //       if (location.pathname === "/androidinstall") {
-    //         location.href = "/main";
-    //       }
-    //     }
-    //   }
-    //   else {
-    //     console.log(location.pathname);
-    //     if (location.pathname !== "/androidinstall") {
-    //       location.href = "/androidinstall";
-    //       console.log("not installed")
-    //     }
-    //   }
-    // }
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-1922276269568764",
+      enable_page_level_ads: true
+    });
   </script>
+
   <script>
+    //appends the style sheet based on the userAgent
     if (/Android/i.test(navigator.userAgent)) {
       console.log("android")
       link = document.createElement("link");
@@ -88,7 +58,6 @@
     }
   </script>
   <script>
-    console.log()
 
     //portait
     if (window.innerHeight > window.innerWidth) {
@@ -118,17 +87,17 @@
     }
   </style>
   <script>
-    // 1. Import the functions
-    const bodyScrollLock = require('body-scroll-lock');
-    const disableBodyScroll = bodyScrollLock.disableBodyScroll;
-    const enableBodyScroll = bodyScrollLock.enableBodyScroll;
+    // // 1. Import the functions
+    // const bodyScrollLock = require('body-scroll-lock');
+    // const disableBodyScroll = bodyScrollLock.disableBodyScroll;
+    // const enableBodyScroll = bodyScrollLock.enableBodyScroll;
 
-    // 2. Get a target element that you want to persist scrolling for (such as a modal/lightbox/flyout/nav).
-    const targetElement = document.querySelector("body");
+    // // 2. Get a target element that you want to persist scrolling for (such as a modal/lightbox/flyout/nav).
+    // const targetElement = document.querySelector("body");
 
 
-    // 3. ...in some event handler after showing the target element...disable body scroll
-    disableBodyScroll(targetElement);
+    // // 3. ...in some event handler after showing the target element...disable body scroll
+    // disableBodyScroll(targetElement);
   </script>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#1976d2">
@@ -139,4 +108,5 @@
 </body>
 <script src="assets/js/home.js"></script>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 </html>
